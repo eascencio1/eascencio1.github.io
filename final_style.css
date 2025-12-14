@@ -1,0 +1,401 @@
+.banner {
+    width: 100%;
+    background: #b6a6ca;
+    padding: 24px 8px;
+    border-radius: 18px; /*ai added a space and asterisk here to prevent css parsing error*/
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h1 {
+    color: #3a2e4d;
+    margin: 0;
+    font-size: 48px;
+    white-space: nowrap;
+}
+
+
+body {
+    background-color: #e1dee9;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.red-hat-display {
+  font-family: "Red Hat Display", sans-serif; /*ai added sans-serif as a fallback in case google font does not load*/
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif; /*ai added sans-serif as a fallback in case google font does not load*/
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+p {
+    margin: 24px 0;
+    padding: 0 16px;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.topline {
+    font-size: 27px;
+    font-weight: bold;
+    color: #3a2e4d;
+}
+
+h2 {
+    font-size: 29px;
+}
+
+
+li{
+    list-style-type: none;
+    text-decoration: none;
+    background-color: #b6a6ca;
+    
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+header {
+    padding: 32px 0;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.header-content h1 {
+    position: relative;
+    left: auto;
+    transform: none;
+    margin: 0;
+    text-align: center;
+    width: auto;
+    pointer-events: auto;
+    font-size: 48px;
+}
+
+
+/* stylization for hamburger menu */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 24px 8px;
+    position: absolute;
+    right: 16px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* end of stylization for hamburger menu */
+
+.nav-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.uhaul-flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.uhaul-image{
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.yzone-flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.yzone-image{
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: #b6a6ca;
+    color: white;
+    margin-top: 32px;
+}
+
+.frontpage-image {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 32px;
+}   
+
+.frontpage-flex {
+    display: flex;
+    align-items: center;
+}
+
+.image-border {
+    border: 7px solid #3a2e4d;
+}
+
+.gmail-image {
+    width: 65px;
+    height: 65px;
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.linkedin-image {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 0 16px;
+
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0;
+}
+
+.email {
+    color: #495057
+}
+
+.skills-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+ }
+
+.skill-item {
+    flex: 1 1 22%;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    /*for when screen gets smaller, hamburger menu will appear*/
+    .hamburger {
+        display: flex;
+    }
+
+    .header-content h1 {
+        font-size: 24px;
+    }
+
+    .nav-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background-color: #e1dee9
+    }
+
+    .nav-menu.active {
+        max-height: 300px;
+        overflow: visible;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+        padding: 1rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .uhaul-flex {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .yzone-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .email-section, .linkedin-section {
+        flex: 1;
+    }
+
+    .frontpage-image {
+
+        width: 80%;
+        height: auto;
+       
+    }
+
+    .skills-flex{
+       flex-direction: column;
+       align-items: center;
+    }
+
+    .skill-item {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .frontpage-flex {
+        flex-direction: column;
+    }
+    .uhaul-image, .yzone-image {
+        width: 80%;
+        height: auto;
+        margin-bottom: 16px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .header-content {
+        gap: 32px;
+        margin-bottom: 0;
+    }
+
+    /* when screen gets larger, hamburger menu will disappear */
+    .hamburger {
+        display: none;
+    }
+
+    .nav-menu {
+        width: 100%;
+        position: static;
+        max-height: none;
+        overflow: visible;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 56px;
+        padding: 0;
+        justify-content: center;
+        font-size: 24px;
+    }
+
+    nav ul li {
+        display: inline;
+        background-color: transparent;
+        text-align: center;
+        text-decoration-color: black;
+        border: none;
+        padding: 0 8px;
+        margin: 0;
+    }
+
+    .contact-section {
+        display: flex;
+        flex-direction: row;
+        gap: 48px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .email-section, .linkedin-section {
+        flex: 1;
+    }
+
+    h1 {
+        text-align: center;
+        padding-left: 10%;
+    }
+
+
+    
+}
